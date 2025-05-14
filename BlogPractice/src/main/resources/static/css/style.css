@@ -1,4 +1,13 @@
 /*========= 共通設定CSS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;600&display=swap");
+
+html,
+body {
+  font-family: "Kiwi Maru", "Helvetica", "Arial", sans-serif;
+  color: #594A4E;
+  line-height: 1.6;
+  background: #FFFAF5;
+
 img {
     width: 100%;
     height: auto;
@@ -10,10 +19,18 @@ main {
     margin-bottom: 2rem;
 }
 
+.blog_logo{
+    width: clamp(40px, 25%, 70px); 
+    height: auto;  
+    object-fit: contain; 
+    vertical-align: top;
+}
+
+
 
 /*========= ヘッダーのCSS ===============*/
 header {
-    background-color: rgba(255, 255, 255, .7);
+    background-color: rgb(255, 216, 175);
     height: 6rem;
     position: fixed;
     width: 100%;
@@ -24,7 +41,7 @@ header {
 
 /*ヘッダーの幅を綺麗にそろえるために要素の大きさを均一にする*/
 .logo, .menu-contents {
-    width: 4rem;
+    width: rem;
 }
 
 .pc {
