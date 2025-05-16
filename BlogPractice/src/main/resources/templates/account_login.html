@@ -6,8 +6,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>ログイン画面</title>
-	<link rel="stylesheet" href="reset.css">
-	<link rel="stylesheet" href="login.css">
+	<link rel="stylesheet" th:href="@{/css/reset.css}">
+	<link rel="stylesheet" th:href="@{/css/login.css}">
 </head>
 
 <body>
@@ -15,7 +15,7 @@
 	<header class="pc">
 		<nav class="pc-nav">
 			<div class="pc-nav-left">
-				<a href=""><img class="login_logo" src="login_logo.png" alt="login_logo"></a>
+				<a href=""><img class="login_logo" th:src="@{/image/login_logo.png}" alt="login_logo"></a>
 			</div>
 			<div class="pc-nav-right">
 				<div><a href=""><img src="#" alt=""></a></div>
@@ -28,11 +28,11 @@
 		<section>
 			<h2>ログイン</h2>
 
-			<form action="/users/login/process" method="post">
+			<form th:action="@{/account/login/process}" method="post">
 				<table>
 					<tr>
 						<th>email</th>
-						<td><input type="text" name="user_email"></td>
+						<td><input type="email" name="accountEmail"></td>
 					</tr>
 					<tr>
 						<th>password</th>
@@ -43,7 +43,7 @@
 					<button id="login" class="active_btn" type="submit">ログイン</button>
 				</div>
 				<div class="submit-button">
-					<button id="register" class="user_login_btn" type="submit">新規登録はこちら</button>
+					<button id="register" class="account_login_btn" type="submit">新規登録はこちら</button>
 				</div>
 			</form>
 		</section>
