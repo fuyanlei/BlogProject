@@ -6,8 +6,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>ブログ一覧</title>
-	<link rel="stylesheet" href="@{/css/reset.css}">
-	<link rel="stylesheet" href="@{/css/style.css}">
+	<link rel="stylesheet" th:href="@{/css/reset.css}">
+	<link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 
 <body>
@@ -20,8 +20,8 @@
 				</div>
 				<ul class="pc-list">
 
-					<li class="pc-list__item"><a href="">ホーム</a></li>
-					<li class="pc-list__item"><a href="">ブログ一覧</a></li>
+					<li class="pc-list__item" th:text="${accountName}"><a href="">ホーム</a></li>
+					<li class="pc-list__item"><a th:href="@{/blog/list}">ブログ一覧</a></li>
 					<li class="pc-list__item"><a th:href="@{/account/logout}">ログアウト</a></li>
 				</ul>
 			</div>
@@ -31,16 +31,16 @@
 		<div class="main-inner">
 			<section class="register-section">
 				<h2>記事登録</h2>
-				<form action="" method="post" enctype="multipart/form-data">
+				<form th:action="@{/blog/register/process}" method="post" enctype="multipart/form-data">
 					<div class="register-section-details">
 						<div class="register-section-details_flex">
 							<div>タイトル</div>
-							<input type="text" name="blogName" value="" id="adminName">
+							<input type="text" name="blogTitle" value="" id="accountName">
 						</div>
 
 						<div class="register-section-details_flex">
 							<div>カテゴリー</div>
-							<input type="text" name="blogCategory" value="">
+							<input type="text" name="categoryName" value="">
 							<!-- <select name="blogCategory">
 								<option value=""></option>
 								<option value="焼肉" selected="">焼肉
@@ -56,7 +56,7 @@
 						</div>
 						<div class="register-section-details_flex">
 							<div>詳細</div>
-							<textarea name="blogText" placeholder="記事内容の入力"></textarea>
+							<textarea name="article" placeholder="記事内容の入力"></textarea>
 						</div>
 
 					</div>

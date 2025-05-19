@@ -12,9 +12,9 @@ import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class AccountLoginController {
+	
 	@Autowired
 	private AccountService accountService;
-
 	@Autowired
 	private HttpSession session;
 
@@ -28,11 +28,13 @@ public class AccountLoginController {
 	@PostMapping("/account/login/process")
 	public String accountLoginProcess(@RequestParam String accountEmail, @RequestParam String password) {
 		Account account = accountService.loginCheck(accountEmail, password);
+		
 		if (account == null) {
 			return "account_login.html";
 		} else {
 			session.setAttribute("loginAccountInfo", account);
 			return "redirect:/blog/list";
 		}
+		
 	}
 }
