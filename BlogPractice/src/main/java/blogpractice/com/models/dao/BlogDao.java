@@ -20,9 +20,13 @@ public interface BlogDao extends JpaRepository<Blog, Long> {
 	// ブログの登録チェックに使用
 	Blog findByBlogTitle(String blogTitle);
 
-	//編集画面を表示する際に使用
+	// 編集画面を表示する際に使用
 	Blog findByBlogId(Long blogId);
 
-	//削除使用
+	// 削除使用
 	void deleteByBlogId(Long blogId);
+
+	// タイトル検索使用
+	List<Blog> findByBlogTitleContaining(String keyword);
+
 }

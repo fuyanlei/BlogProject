@@ -5,12 +5,13 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>ブログ一覧</title>
+	<title>アカウント詳細</title>
 	<link rel="stylesheet" th:href="@{/css/reset.css}">
 	<link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 
 <body>
+
 	<header>
 		<!--pc-->
 		<nav class="pc">
@@ -27,10 +28,32 @@
 			</div>
 		</nav>
 	</header>
+
 	<main>
-		<div class="main-inner">
+		<section class="register-section">
+
 			<section class="register-section">
-				<h2>記事更新</h2>
+				<h2>自己紹介</h2>
+				<div class="register-section-details">
+					<div class="register-section-details_flex">
+						<div>アカウントId</div>
+						<div th:text="${accountId}"></div>
+					</div>
+					<div class="register-section-details_flex">
+						<div>ユーザー名</div>
+						<div th:text="${accountName}"></div>
+					</div>
+					<div class="register-section-details_flex">
+						<div>メール</div>
+						<div th:text="${accountEmail}"></div>
+					</div>
+
+					<div class="register-section-details_flex">
+						<a class="btn--orange btn--radius" th:href="@{/blog/register}">記事を投稿する</a>
+					</div>
+			</section>
+		</section>
+		<!--<h2>記事更新</h2>
 				<form th:action="@{/blog/edit/process}" method="post" enctype="multipart/form-data">
 					<div class="register-section-details">
 						<div class="register-section-details_flex">
@@ -41,10 +64,10 @@
 						<div class="register-section-details_flex">
 							<div>カテゴリー</div>
 							<input type="text" name="categoryName" th:value="${blog.categoryName}">
-							<!-- <select name="blogCategory">
+							 <select name="blogCategory">
 								<option value=""></option>
 								<option value="焼肉" selected="">焼肉
-							</select> -->
+							</select> 
 						</div>
 						<div class="register-section-details_flex">
 							<div>画像</div>
@@ -69,8 +92,9 @@
 					</div>
 				</form>
 			</section>
-		</div>
+-->
 	</main>
+
 	<footer>
 		<div>
 			<small>&copy; 2025 fuyanlei</small>

@@ -243,24 +243,24 @@ body {
 	}
 
 	/*----------商品一覧--------------*/
-	.products {
+	.blog {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 	}
 
-	.products li {
+	.blog li {
 		width: 33%;
 		margin: 0.5rem;
 		border: 1px solid #594A4E;
 	}
 
-	.products li a img {
+	.blog li a img {
 		padding: 0.5rem;
 		box-sizing: border-box;
 	}
 
-	.products li a p {
+	.blog li a p {
 		text-align: center;
 		color: #594A4E;
 		font-weight: bold;
@@ -310,12 +310,12 @@ body {
 	}
 
 	/*----------------商品一覧---------------------*/
-	.products-list {
+	.blog-list {
 		width: 90%;
 		margin: 1rem auto;
 	}
 
-	.products-list h2 {
+	.blog-list h2 {
 		color: #594A4E;
 		font-family: Kiwi Maru;
 		text-align: center;
@@ -323,36 +323,36 @@ body {
 		padding: 1rem 0;
 	}
 
-	.products-table {
+	.blog-table {
 		width: 100%;
 		margin: 1rem auto;
 		text-align: center;
 		border-top: 1px solid #594A4E;
 	}
 
-	.products-table tr {
+	.blog-table tr {
 		border: 1px solid #594A4E;
 	}
 
-	.products-table th,
-	.products-table td {
+	.blog-table th,
+	.blog-table td {
 		border: 1px solid #594A4E;
 		vertical-align: middle;
 		padding: 1rem 0.5rem;
 	}
 
-	.products-table td button {
+	.blog-table td button {
 		background-color: #EC6015;
 		border: 1px solid #594A4E;
 		color: #fff;
 		margin-left: 0.2rem;
 	}
 
-	.products-table img {
+	.blog-table img {
 		width: 30%;
 	}
 
-	.products-table input {
+	.blog-table input {
 		width: 2rem;
 	}
 
@@ -614,11 +614,11 @@ body {
 		}
 
 		/*----------商品一覧--------------*/
-		.products li {
+		.blog li {
 			width: 25%;
 		}
 
-		.products li a img {
+		.blog li a img {
 			padding: 0.5rem;
 			box-sizing: border-box;
 		}
@@ -659,7 +659,7 @@ body {
 		}
 
 		/*----------------商品一覧---------------------*/
-		.products-list {
+		.blog-list {
 			width: 800px;
 			margin: 1rem auto;
 		}
@@ -669,4 +669,20 @@ body {
 			padding: 1.5rem 0
 		}
 
+		/*検索バー*/
+		.search-form {
+			font-size: 0.8rem;
+			display: flex;
+			justify-content: center;
+			gap: .6rem;
+			max-width: 420px;
+			margin: 0.5rem auto 2rem;
+			background-color: rgb(231, 216, 157);
+			border: 2px solid #EC6015;
+			border-radius: 8px;
+			padding: .8rem 0.5rem;
+			margin-top: 5rem ;
+		}
 	}
+
+}

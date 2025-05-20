@@ -67,4 +67,14 @@ public class BlogService {
 			return true;
 		}
 	}
+
+	// ブログ検索処理
+	public List<Blog> searchBlogs(String keyword) {
+		if (keyword == null || keyword.isEmpty()) {
+			return blogDao.findAll();
+		} else {
+			return blogDao.findByBlogTitleContaining(keyword);
+		}
+	}
+
 }

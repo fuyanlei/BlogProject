@@ -21,8 +21,8 @@
 				</div>
 				<ul class="pc-list">
 					<li class="pc-list__item" th:text="${accountName}"></li>
-					<li class="pc-list__item"><a href="">ホーム</a></li>
-					<li class="pc-list__item"><a href="">ブログ一覧</a></li>
+					<li class="pc-list__item"><a th:href="@{/account/homepage}">ホーム</a></li>
+					<li class="pc-list__item"><a th:href="@{/blog/list}">ブログ一覧</a></li>
 					<li class="pc-list__item"><a th:href="@{/account/logout}">ログアウト</a></li>
 				</ul>
 			</div>
@@ -45,6 +45,12 @@
 					</a>
 				</li>
 
+				<form th:action="@{/blog/search}" method="get" class="search-form">
+					<input type="text" name="keyword" placeholder="タイトルで検索" th:value="${searchQuery}">
+					<button type="submit">検索</button>
+				</form>
+
+
 			</ul>
 
 		</article>
@@ -56,9 +62,9 @@
 		</div>
 	</footer>
 	<script src=" https://code.jquery.com/jquery-3.6.0.min.js"
-							integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
-							</script>
-							<script src="./js/common.js"></script>
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+		</script>
+	<script src="./js/common.js"></script>
 </body>
 
 </html>
