@@ -39,6 +39,7 @@ public class BlogEditController {
 				return "redirect:/blog/list";
 			} else {
 				model.addAttribute("accountName", account.getAccountName());
+				model.addAttribute("accountId", account.getAccountId());//
 				model.addAttribute("blog", blog);
 				return "blog_edit.html";
 			}

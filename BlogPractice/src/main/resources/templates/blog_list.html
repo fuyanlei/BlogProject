@@ -39,17 +39,17 @@
 			<ul class="blogs">
 				<li th:each="blog:${blogList}">
 					<a th:href="@{/blog/edit/{blogId}(blogId=${blog.blogId})}">
-						<img th:src="@{/blog-img/{imagePath}(imagePath=${blog.blogImage})}" alt="">
 						<p th:text="${blog.blogTitle}"></p><br>
+						<img th:src="@{/blog-img/{imagePath}(imagePath=${blog.blogImage})}" alt="">
 						<p th:text="${blog.categoryName}"></p>
 					</a>
 				</li>
-
+				
+				<!--検索機能を追加するためのフォーム-->
 				<form th:action="@{/blog/search}" method="get" class="search-form">
 					<input type="text" name="keyword" placeholder="タイトルで検索" th:value="${searchQuery}">
 					<button type="submit">検索</button>
 				</form>
-
 
 			</ul>
 
